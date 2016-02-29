@@ -1,0 +1,23 @@
+{
+  "name": "reqjs",
+  "description": "",
+  "main": "index.js",
+  "license": "ISC",
+  "moduleType": [
+    "amd"
+  ],
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "app/bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "jquery": "^1.12.0",
+    "requirejs": "^2.1.22",
+    "almond": "^0.3.1"
+  }
+}
