@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <script src="vender/jquery/dist/jquery.js"></script>
+    <script src="vender/knockout/dist/knockout.debug.js"></script>
+    <script src="vender/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="app.js"></script>
+    <link rel="stylesheet" href="vender/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="app.css">
+    <title>KO Test!</title>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <!-- ko foreach: fields -->
+            <label class="col-sm-2 labelvalue">
+                <!-- ko text : fieldName -->
+                <!-- /ko -->
+            </label>
+            <div class="col-sm-4 compvalue">
+                <!-- ko if: fieldType === "text" -->
+                <input type="input" class="form-control" data-bind="value : fieldValue">
+                <!-- /ko -->
+
+                <!-- ko if: fieldType === "select" -->
+                <select class="input-large form-control" data-bind="value : fieldValue, 
+                            options: selectoptions, 
+                            optionsText:'oname', 
+                            optionsValue : 'oid' ">
+                </select>
+                <!-- /ko -->
+
+                <!-- ko if: fieldType === "radio" -->
+                <input type="checkbox" data-bind="value: fieldValue" />
+                <!-- /ko -->
+            </div>
+        <!-- /ko -->
+    </div>
+    <button data-bind="click: submitForm">Submit</button>
+
+</body>
+
+</html>

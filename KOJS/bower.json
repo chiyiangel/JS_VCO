@@ -1,0 +1,28 @@
+{
+  "name": "kojs",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "John Liu <chiyiangel@gmail.com>"
+  ],
+  "license": "ISC",
+  "moduleType": [
+    "amd"
+  ],
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "app/vender",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "knockout": "knockoutjs#^3.4.0"
+  },
+  "devDependencies": {
+    "knockout": "knockoutjs#^3.4.0",
+    "jquery": "1.12"
+  }
+}
